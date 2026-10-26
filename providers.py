@@ -680,6 +680,17 @@ PROVIDERS: list[Provider] = [
         notes="ML-based model routing. Picks optimal provider per query.",
     ),
     Provider(
+        name="TeapotRouter",
+        tier=Tier.ROUTER,
+        endpoint="https://api.teapotrouter.com/v1",
+        env_key="TEAPOTROUTER_API_KEY",
+        free_limits="None (usage-based, prepaid from $1)",
+        models=["GPT + Claude Code via one key"],
+        signup_url="https://teapotrouter.com",
+        test_model="",
+        notes="Usage-based gateway speaking two protocols: OpenAI SDK (base_url /v1) and Anthropic API (ANTHROPIC_BASE_URL for Claude Code). Public per-model pricing, per-request cost ledger, org-issued keys with audit logs, multi-upstream failover.",
+    ),
+    Provider(
         name="LiteLLM (self-hosted)",
         tier=Tier.ROUTER,
         endpoint="http://localhost:4000/v1",

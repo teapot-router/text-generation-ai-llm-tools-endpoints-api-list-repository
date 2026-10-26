@@ -4,14 +4,14 @@
   <a href="https://github.com/TaylorAmarelTech/text-generation-ai-llm-tools-endpoints-api-list-repository/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/python-3.10%2B-blue.svg" alt="Python 3.10+">
   <img src="https://img.shields.io/badge/version-0.4.0-orange.svg" alt="Version: 0.4.0">
-  <img src="https://img.shields.io/badge/providers-58-brightgreen.svg" alt="Providers: 58">
+  <img src="https://img.shields.io/badge/providers-59-brightgreen.svg" alt="Providers: 59">
   <img src="https://img.shields.io/badge/free%20tier-18-success.svg" alt="Free: 18">
   <a href="https://github.com/TaylorAmarelTech/text-generation-ai-llm-tools-endpoints-api-list-repository/stargazers"><img src="https://img.shields.io/github/stars/TaylorAmarelTech/text-generation-ai-llm-tools-endpoints-api-list-repository?style=social" alt="GitHub Stars"></a>
 </p>
 
 <p align="center">
   <strong>The most comprehensive, actively-maintained directory of free and affordable LLM API endpoints.</strong><br>
-  58 providers cataloged &bull; 18 truly free (no credit card) &bull; All OpenAI SDK compatible &bull; Updated: 2026-03-08 00:03 UTC
+  59 providers cataloged &bull; 18 truly free (no credit card) &bull; All OpenAI SDK compatible &bull; Updated: 2026-10-26 22:04 UTC
 </p>
 
 ---
@@ -56,7 +56,7 @@ Whether you're a hobbyist building a chatbot, a startup watching costs, or a res
 
 | Feature | Details |
 |:--------|:--------|
-| **58 Providers, 7 Tiers** | From completely free to pay-per-use, plus routers and local options |
+| **59 Providers, 7 Tiers** | From completely free to pay-per-use, plus routers and local options |
 | **OpenAI SDK Standard** | 90%+ of providers work with `from openai import OpenAI` -- just swap `base_url` |
 | **13 Ready-to-Run Examples** | Chat, streaming, RAG, vision, embeddings, agents, batch, research, cURL, one-liners |
 | **Agent Framework** | 5 agents (Base, ReAct, Research, Code, Summarizer, Data Extractor) + 8 presets |
@@ -138,7 +138,7 @@ See `examples/curl_examples.sh` for all 10 providers.
 | Free Credits | 20 | No* | Trying premium models, short-term projects |
 | Freemium | 3 | Yes | Production apps, frontier models (GPT-4o, Claude) |
 | Pay-per-use | 2 | Yes | Budget-conscious production, Chinese models |
-| Routers / Aggregators | 4 | Varies | Multi-provider failover, observability |
+| Routers / Aggregators | 5 | Varies | Multi-provider failover, observability |
 | Local / Self-hosted | 4 | No | Privacy, offline use, unlimited generation |
 
 > *\*Free Credits tier: credit card generally not required for signup, but credits are one-time and may expire.*
@@ -317,14 +317,16 @@ See `examples/curl_examples.sh` for all 10 providers.
 | 1 | [**Requesty**](https://requesty.ai) | `router.requesty.ai/v1` | Free credits | Auto-failover between providers. |
 | 2 | [**Portkey**](https://portkey.ai) | `api.portkey.ai/v1` | Free tier | AI gateway with observability, guardrails, caching. |
 | 3 | [**Unify.ai**](https://unify.ai) | `api.unify.ai/v0` | Free tier | ML-based model routing. Picks optimal provider per query. |
-| 4 | [**LiteLLM (self-hosted)**](https://github.com/BerriAI/litellm) | `localhost:4000/v1` | Free (open source) | Open-source proxy. Unified format for all providers. |
+| 4 | [**TeapotRouter**](https://teapotrouter.com) | `api.teapotrouter.com/v1` | None (usage-based, prepaid from $1) | Usage-based gateway speaking two protocols: OpenAI SDK (base_url /v1) and Anthropic API (ANTHROPIC_BASE_URL for Claude Code). Public per-model pricing, per-request cost ledger, org-issued keys with audit logs, multi-upstream failover. |
+| 5 | [**LiteLLM (self-hosted)**](https://github.com/BerriAI/litellm) | `localhost:4000/v1` | Free (open source) | Open-source proxy. Unified format for all providers. |
 
 <details>
-<summary><strong>Provider Notes (4)</strong></summary>
+<summary><strong>Provider Notes (5)</strong></summary>
 
 - **Requesty**: Auto-failover between providers.
 - **Portkey**: AI gateway with observability, guardrails, caching.
 - **Unify.ai**: ML-based model routing. Picks optimal provider per query.
+- **TeapotRouter**: Usage-based gateway speaking two protocols: OpenAI SDK (base_url /v1) and Anthropic API (ANTHROPIC_BASE_URL for Claude Code). Public per-model pricing, per-request cost ledger, org-issued keys with audit logs, multi-upstream failover.
 - **LiteLLM (self-hosted)**: Open-source proxy. Unified format for all providers.
 
 </details>
@@ -865,7 +867,7 @@ text-generation-ai-llm-tools-endpoints-api-list-repository/
 ├── main.py                  # CLI entry point (11 subcommands)
 ├── config.py                # Config loader (YAML + env overrides)
 ├── config.yaml              # All settings (scan, search, discovery, plugins)
-├── providers.py             # Provider registry (58 providers, 7 tiers)
+├── providers.py             # Provider registry (59 providers, 7 tiers)
 ├── scanner.py               # Async endpoint health checker (httpx)
 ├── report_generator.py      # README/report generator
 ├── requirements.txt         # Python dependencies
@@ -1068,5 +1070,5 @@ See **[CONTRIBUTING.md](CONTRIBUTING.md)** for full guidelines. Quick version:
 ---
 
 <p align="center">
-  <sub>Auto-generated by <a href="https://github.com/TaylorAmarelTech/text-generation-ai-llm-tools-endpoints-api-list-repository">LLM Endpoint Scanner</a> v0.4.0 &bull; Last updated: 2026-03-08 00:03 UTC</sub>
+  <sub>Auto-generated by <a href="https://github.com/TaylorAmarelTech/text-generation-ai-llm-tools-endpoints-api-list-repository">LLM Endpoint Scanner</a> v0.4.0 &bull; Last updated: 2026-10-26 22:04 UTC</sub>
 </p>
